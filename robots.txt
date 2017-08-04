@@ -1,0 +1,14 @@
+User-agent: *
+Disallow: /binar/$
+Disallow: /chronos/$
+Disallow: /diod/$
+Disallow: /duf/$
+Disallow: /dufta_opt/$
+Disallow: /florial/$
+Disallow: /gostin/$
+Disallow: /jd/$
+Disallow: /jusupov/$
+Disallow: /kuhni/$
+Disallow: /old/$
+Disallow: /sibstroi/$
+Disallow: /prokurs/$

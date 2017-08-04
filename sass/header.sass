@@ -1,0 +1,554 @@
+@import bourbon
+@import fonts.sass
+@import vars.sass
+
+
+body
+	font-family: "Raleway", sans-serif
+	font-weight: normal
+	font-size: 14px
+	min-width: 320px
+	position: relative
+	line-height: 1.42857
+	-webkit-font-smoothing: antialised
+	overflow-x: hidden
+	letter-spacing: 1px
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: red
+
+body input:required:valid
+body textarea:required:valid
+	color: green
+
+input:focus,
+textarea:focus,
+button:focus
+	outline: none
+
+.hidden
+	display: none
+
+a
+	color: $acc
+	&:focus
+		outline: none
+	&:hover
+		color: $acc
+
+.button
+	color: #fff
+	border: none
+	line-height: 40px
+	padding: 0 25px
+	font-size: 13px
+	font-weight: 600
+	display: inline-block
+	background-color: #2ea2cc
+	letter-spacing: 2px
+	cursor: pointer
+	text-transform: uppercase
+	transition: all .2s
+	&:hover
+		color: #fff
+		text-decoration: none
+		background-color: lighten(#2ea2cc, 6%)
+
+.ghost-button
+	display: inline-block
+	border-radius: 3px
+	background-color: transparent
+	border: 1px solid #222
+	color: #222
+	font-size: 10px
+	transition: all .2s ease-in-out
+	&:hover
+		background-color: #222
+		text-decoration: none
+		color: #fff
+	&:active
+		background-color: darken(#222, 6%)
+		text-decoration: none
+		color: #fff
+	&:focus
+		text-decoration: none
+		color: #222
+
+.m-button
+	padding: 6px 10px
+	line-height: 20px
+
+.ten
+	position: fixed
+	display: none
+	width: 100%
+	height: 100%
+	background-color: rgba(46,162,204,.6)
+	z-index: 900
+
+.modal
+	width: 310px
+	height: 310px
+	position: fixed
+	display: none
+	padding: 20px
+	top: 50%
+	left: 50%
+	margin-top: -155px
+	margin-left: -155px
+	background-color: #fff
+	box-shadow: 0 0 3px rgba(0,0,0,.6)
+	z-index: 999
+	.modal-msg
+		font-size: em(22px)
+		text-align: center
+		margin-top: 65px
+	.button
+		position: absolute
+		top: 60%
+		left: 50%
+		margin-left: -60px
+
+
+.close-btn
+	position: absolute
+	right: 10px
+	top: 10px
+	cursor: pointer
+	i
+		font-size: 18px
+
+section,
+header
+	position: relative
+
+.page-head
+	background-color: #f2f2f2
+	padding: 20px 0
+	.ghost-button
+		float: right
+
+
+.main-head
+	color: #fff
+	min-height: 480px
+	padding-top: 20px
+	position: relative
+	background: url(../img/bg.jpg) top center no-repeat
+	background-size: cover
+	background-attachment: fixed
+
+.s-header
+	h2
+		text-align: center
+		text-transform: uppercase
+		font-size: 24px
+		margin: 0 0 15px
+		letter-spacing: 3px
+	.s-descr-wrap
+		text-align: center
+		.s-descr
+			display: inline-block
+			text-transform: uppercase
+			font-size: 12px
+			position: relative
+			margin-bottom: 130px
+			font-weight: 600
+			letter-spacing: 5px
+
+.logo
+	font-family: "Katherine"
+	font-size: em(36px)
+	color: $acc
+	transition: all .5s ease
+	letter-spacing: 1px
+	z-index: 2
+	&:hover
+		color: $main
+		text-decoration: none
+		text-shadow:  0 0 1px rgba(255,255,255, 0.6),0 0 1px rgba(255,0,222, 0.6), 0 0 2px  rgba(255,0,222, 0.6), 0 0 5px  rgba(255,0,222, 0.6), 0 0 0px  rgba(255,0,222, 0.6), 0 0 20px  rgba(255,0,222, 0.6)
+	&:active
+		text-decoration: none
+		color: $main
+	&:focus
+		text-decoration: none
+		color: $main
+	&:visited
+		text-decoration: none
+		color: $main
+
+.ishome
+	.logo
+		color: #fff
+		font-size: em(34px)
+		z-index: 100
+		width: 70px
+		height: 70px
+		display: block
+		img
+			width: 100%
+
+
+.contacts
+	a
+		svg
+			fill: #ccc
+
+.toggle-mnu
+	width: 60px
+	height: 60px
+	float: right
+	position: fixed
+	top: 20px
+	right: 20px
+	z-index: 100
+	border: none
+	background-color: #000
+	.sandwich
+		width: 28px
+		height: 28px
+		position: absolute
+		top: 8px
+		bottom: 0
+		left: 0
+		right: 0
+		margin: auto
+		z-index: 200
+		> span
+			display: block
+
+.sandwich
+	width: 28px
+	height: 28px
+	position: absolute
+	top: 8px
+	bottom: 0
+	left: 0
+	right: 0
+	margin: auto
+	z-index: 200
+	> span
+		display: block
+
+.sw-topper
+	position: relative
+	top: 0
+	width: 28px
+	height: 3px
+	background: #fff
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.sw-bottom
+	position: relative
+	width: 28px
+	height: 3px
+	top: 6.6px
+	background: #fff
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: transform 0.5s, top 0.2s
+	transition-delay: 0.2s, 0s
+
+.sw-footer
+	position: relative
+	width: 28px
+	height: 3px
+	top: 13.5px
+	background: #fff
+	border: none
+	border-radius: 4px 4px 4px 4px
+	transition: all 0.5s
+	transition-delay: 0.1s
+
+.sandwich.active
+	.sw-topper
+		top: 9px
+		transform: rotate(-45deg)
+
+.sandwich.active
+	.sw-bottom 
+		top: 6px;
+		transform: rotate(45deg)
+
+.sandwich.active
+	.sw-footer
+		opacity: 0
+		top: 0
+		transform: rotate(180deg)
+
+.topbar
+	position: absolute
+	z-index: 100
+	margin: 0 auto
+	width: 100%
+
+.mnu
+	float: right
+	ul
+		list-style-type: none
+		padding: 0
+		li
+			display: inline-block
+			margin: 0 8px
+			a
+				text-transform: uppercase
+				text-decoration: none
+				color: #fff
+				cursor: pointer
+				letter-spacing: 2px
+				&:hover
+					color: #FD00E4
+					text-decoration: none
+
+.top-mnu
+	position: fixed
+	width: 100%
+	height: 100%
+	background-color: rgba(0, 0, 0, 0.8)
+	z-index: 50
+	right: 0
+	top: 0
+	display: none
+	ul, li
+		list-style-type: none
+		padding: 0
+		margin: 0
+	ul
+		margin-top: 180px
+		text-align: center
+		a
+			color: #fff
+			display: block
+			padding: 20px 0
+			text-transform: uppercase
+			font-size: 12px
+			transition: all 0.5s ease
+			opacity: 0
+			position: relative
+			height: 60px
+			outline: none
+			letter-spacing: 4px
+			text-decoration: none
+			&:hover
+				background-color: rgba(255,255,255,.1)
+				text-decoration: none
+				color: #2EA2CC
+		li
+			&:nth-child(1)
+				animation-duration: 0.5s
+			&:nth-child(2)
+				animation-duration: 1s
+			&:nth-child(2)
+				animation-duration: 1.5s
+			&:nth-child(2)
+				animation-duration: 2s
+
+.top-wrapper
+	display: table
+	position: absolute
+	top: 50%
+	margin-top: -83px
+	left: 0
+	width: 100%
+	height: 100%
+	height: 166px
+	z-index: 10
+	.top-descr
+		display: table-row
+		.top-centered
+			display: table-cell
+			text-align: center
+			vertical-align: middle
+
+.top-text
+	display: inline-block
+	h1
+		display: inline-block
+		padding: 10px 35px
+		font-weight: bold
+		font-size: em(72px)
+		letter-spacing: em(1px)
+		margin-left: 20px
+		margin-right: 20px
+		margin-bottom: 0px
+		font-family: "Katherine"
+		color: #f0f0f0
+		text-shadow: 0 0 8px rgb(176,34,110)
+		text-shadow: 0 0 5px #ffffff, 0 0 3px #ffffff, 0 0 8px #ffffff, 0 0 15px #ff00de, 0 0 25px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 60px #ff00de
+		animation: blink 3s linear infinite
+	svg
+		display: inline-block
+		padding: 10px 35px
+		font-weight: bold
+		font-size: em(72px)
+		letter-spacing: em(1px)
+		margin-left: 20px
+		margin-right: 20px
+		margin-bottom: 0px
+		font-family: "Katherine"
+		color: #f0f0f0
+		text-shadow: 0 0 8px rgb(176,34,110)
+		text-shadow: 0 0 5px #ffffff, 0 0 3px #ffffff, 0 0 8px #ffffff, 0 0 15px #ff00de, 0 0 25px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 60px #ff00de
+		animation: blink 3s linear infinite
+	p
+		margin: 0
+		text-transform: uppercase
+		letter-spacing: em(5px)
+
+@keyframes blink 
+	0%
+		text-shadow: 0 0 5px rgba(255,255,255, 0.8), 0 0 3px rgba(255,255,255, 0.8), 0 0 8px rgba(255,255,255, 0.8),0 0 15px rgba(255,0,222, 0.8), 0 0 25px  rgba(255,0,222, 0.8), 0 0 35px  rgba(255,0,222, 0.8), 0 0 40px  rgba(255,0,222, 0.8), 0 0 60px  rgba(255,0,222, 0.8)
+	50%
+		text-shadow: 0 0 5px rgba(255,255,255, 0.2), 0 0 3px rgba(255,255,255, 0.2), 0 0 8px rgba(255,255,255, 0.2),0 0 15px rgba(255,0,222, 0.2), 0 0 25px  rgba(255,0,222, 0.2), 0 0 35px  rgba(255,0,222, 0.2), 0 0 40px  rgba(255,0,222, 0.2), 0 0 60px  rgba(255,0,222, 0.2)
+	100%
+		text-shadow: 0 0 5px rgba(255,255,255, 0.8), 0 0 3px rgba(255,255,255, 0.8), 0 0 8px rgba(255,255,255, 0.8),0 0 15px rgba(255,0,222, 0.8), 0 0 25px  rgba(255,0,222, 0.8), 0 0 35px  rgba(255,0,222, 0.8), 0 0 40px  rgba(255,0,222, 0.8), 0 0 60px  rgba(255,0,222, 0.8)
+
+@keyframes neonspark
+  0%
+    text-shadow: 0 0 5px rgba(255,255,255, 0.6), 0 0 3px rgba(255,255,255, 0.6), 0 0 8px rgba(255,255,255, 0.6),0 0 15px rgba(255,0,222, 0.6), 0 0 25px  rgba(255,0,222, 0.6), 0 0 35px  rgba(255,0,222, 0.6), 0 0 40px  rgba(255,0,222, 0.6), 0 0 60px  rgba(255,0,222, 0.6)
+
+  30%
+    text-shadow: 0 0 5px rgba(255,255,255, 0.4), 0 0 3px rgba(255,255,255, 0.4), 0 0 8px rgba(255,255,255, 0.4),0 0 15px rgba(255,0,222, 0.4), 0 0 25px  rgba(255,0,222, 0.4), 0 0 35px  rgba(255,0,222, 0.4), 0 0 40px  rgba(255,0,222, 0.4), 0 0 60px  rgba(255,0,222, 0.4)
+
+  60%
+    text-shadow: 0 0 5px rgba(255,255,255, 0.2), 0 0 3px rgba(255,255,255, 0.2), 0 0 8px rgba(255,255,255, 0.2),0 0 15px rgba(255,0,222, 0.2), 0 0 25px  rgba(255,0,222, 0.2), 0 0 35px  rgba(255,0,222, 0.2), 0 0 40px  rgba(255,0,222, 0.2), 0 0 60px  rgba(255,0,222, 0.2)
+
+  80%
+		text-shadow: 0 0 5px rgba(255,255,255, 0.4), 0 0 3px rgba(255,255,255, 0.4), 0 0 8px rgba(255,255,255, 0.4),0 0 15px rgba(255,0,222, 0.4), 0 0 25px  rgba(255,0,222, 0.4), 0 0 35px  rgba(255,0,222, 0.4), 0 0 40px  rgba(255,0,222, 0.4), 0 0 60px  rgba(255,0,222, 0.4)
+
+  100%
+    text-shadow: 0 0 5px rgba(255,255,255, 0.8), 0 0 3px rgba(255,255,255, 0.8), 0 0 8px rgba(255,255,255, 0.8),0 0 15px rgba(255,0,222, 0.8), 0 0 25px  rgba(255,0,222, 0.8), 0 0 35px  rgba(255,0,222, 0.8), 0 0 40px  rgba(255,0,222, 0.8), 0 0 60px  rgba(255,0,222, 0.8)
+
+
+.s-wide
+	padding: 80px 0
+
+.s-dark
+	background-color: $bg
+	color: #fff
+
+.ishome
+	.s-header .s-descr-wrap .s-descr
+		margin-bottom: 50px
+.s-works
+	.col-lg-3
+		padding: 0
+	.work-item
+		display: block
+		position: relative
+		overflow: hidden
+		&-content
+			position: absolute
+			padding-top: 25%
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background-color: rgba(0,0,0,.15)
+			text-align: center
+			opacity: 0
+			+mt(.7s)
+		img
+			+mt(.5s)
+		&:hover
+			.work-item-content
+				opacity: 1
+			img
+				transform: scale(1.01)
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+		text-align: center
+		&.active
+			color: #fff
+			border-bottom: 1px solid #2ea2cc
+	li
+		display: inline-block
+		margin: 0 10px
+		text-transform: uppercase
+		font-size: 12px
+		cursor: pointer
+		line-height: 2
+		letter-spacing: 2px
+		margin-bottom: 8px
+		color: #888
+	ul
+		margin-bottom: 50px
+
+.responsive-img
+	max-width: 100%
+	width: 100%
+
+.s-contacts
+	.h3
+		text-transform: uppercase
+		text-align: left
+		color: #000
+		margin-bottom: 10px
+		font-size: 14px
+		letter-spacing: 2px
+	.contact-box
+		margin-bottom: 25px
+
+.main-form
+	.form-group
+		color: #888
+		letter-spacing: 2px
+	button
+		color: #fff
+		border: none
+		line-height: 40px
+		padding: 0 25px
+		font-size: 13px
+		text-transform: uppercase
+		font-weight: 600
+		margin-top: 10px
+		float: right
+		background-color: $acc
+		letter-spacing: 2px
+
+.form-group
+	display: block
+	margin-bottom: 20px
+	input, textarea
+		width: 100%
+		display: block
+		line-height: 30px
+		margin-top: 5px
+		border: 1px solid #CCC
+		color: #ccc
+		text-indent: 12px
+		font-size: 12px
+		background-color: transparent
+		letter-spacing: 2px
+	input
+		&:focus
+			border: 1px solid $acc
+	textarea
+		&:focus
+			border: 1px solid $acc
+	.text-danger
+		color: $acc
+
+.color-element
+	color: $acc
+
+.ishome
+	footer
+		background-color: $bg
+		color: #888
+		// color: #f0f0f0
+
+footer
+		background-color: #f2f2f2
+		color: #222
+		font-size: 13px
+		font-weight: 300
+		padding: 50px 0
+		letter-spacing: 0

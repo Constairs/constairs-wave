@@ -103,8 +103,7 @@
 			<div class="top-descr">
 				<div class="top-centered">
 					<div class="top-text">
-						<h1>Constairs
-						</h1>
+						<h1>Constairs</h1>
 						<p>WEB-разработчик</p>
 					</div>
 				</div>
@@ -245,39 +244,35 @@
 					<div class="col-md-6 col-sm-6">
 						
 						<div class="contact-box">
-							<div class="h3">Skype:</div>
-							<a href="skype:constairs?add">constairs</a>
-						</div>
-						<div class="contact-box">
 							<div class="h3">E-mail:</div>
 							<a href="mailto: constairs@gmail.com">constairs@gmail.com</a>
 						</div>
 						<div class="contact-box">
-							<div class="h3">VK:</div>
-							<a href="https://vk.com/constairs">vk.com/constairs</a>
+							<div class="h3">Telegram:</div>
+							<a href="https://telegram.me/@constairs">constairs</a>
 						</div>
 
 					</div>
 					<div class="col-md-6 col-sm-6">
 
-						<form class="main-form" method="post">
+						<form id="form" class="main-form" method="post" role="form">
 							<input type="hidden" name="form_name" value="Форма на главной">
 							<label class="form-group">
 								<span class="color-element">*</span> Ваше имя:
-								<input type="text" name="name" placeholder="Ваше имя" class="validname" required />
+								<input type="text" name="name" placeholder="Ваше имя"/>
 								<span class="help-block text-danger"></span>
 							</label>
 							<label class="form-group">
 								<span class="color-element">*</span> Ваш E-mail:
-								<input type="email" name="email" placeholder="Ваш E-mail" class="validemail" required />
+								<input type="email" name="email" placeholder="Ваш E-mail"/>
 								<span class="help-block text-danger"></span>
 							</label>
 							<label class="form-group">
 								<span class="color-element">*</span> Ваше сообщение:
-								<textarea name="message" placeholder="Ваше сообщение" class="validmessage" required></textarea>
+								<textarea name="message" placeholder="Ваше сообщение"></textarea>
 								<span class="help-block text-danger"></span>
 							</label>
-							<button>Отправить</button>
+							<button type="submit">Отправить</button>
 						</form>						
 
 					</div>
@@ -285,6 +280,79 @@
 			</div>
 		</div>
 
+	</section>
+
+		<section class="s-wide s-dark s-about">
+		<div class="container">
+
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="person">
+						<img src="img/photo.jpg" alt="photo">
+					</div>
+					<ul>
+						<li>— Денис Бехтерев</li>
+						<li>— Новосибирск</li>
+						<li>— Web-разработчик</li>
+						<li>— Дизайн сайтов, html верстка, посадка на CMS</li>
+					</ul>
+					<ul>
+						<li><a href="mailto: constairs@gmail.com">constairs@gmail.com</a></li>
+						<li><a href="https://telegram.me/&lt;@constairs&gt;">Telegram - constairs</a></li>
+					</ul>
+				</div>
+
+				<div class="col-xs-12">
+					<p class="txt">
+						Занимаюсь front-end разработкой, работаю над проектами, как в команде с программистами и дизайнерами, так и создаю сайты с нуля. Позабочусь о гибкости верстки и удобстве её дальнейшего использования.
+					</p>
+					<p class="txt">
+						Разрабатываю сайты для малого бизнеса, реализуя комплексный подход к процессу: дизайн сайта разрабатывается с точки зрения удобства пользователя, соответствия имиджу компании, учитывается привлекательность содержания и структуры сайта для поисковых систем.
+					</p>
+				</div>
+			</div>
+
+			<div class="row">
+				
+					<div class="col-md-6 col-sm-6">
+						<div class="feature_item">
+							<div class="feature_name">Кроссбраузерность</div>
+							<p>
+								Ваш сайт будет одинаково выглядеть и работать в большинстве соверменных браузеров.
+							</p>
+						</div>
+						<div class="feature_item">
+							<div class="feature_name">Адаптивная верстка</div>
+							<p>
+								Сайт будет оптимально выглядеть на каждом типе устройств, будь то настольный компьютер, ноутбук, планшет или смартфон.
+							</p>
+						</div>
+						<div class="feature_item">
+							<div class="feature_name">Валидный код</div>
+							<p>
+								Роботы поисковых систем отдают предпочтение сайту с валидным кодом, а значит этот сайт будет находиться выше в поисковой выдаче, также страницы у которых код без ошибок, загружаются браузерами быстрее. 
+							</p>
+						</div>
+					</div>
+
+					<div class="col-md-6 col-sm-6">
+						<div class="feature_item">
+							<div class="feature_name">Оптимизация загрузки</div>
+							<p>
+								Будет проевена оптимизация скорости загрузки сайта. Рейтинг в Google Page Speed от 90.
+							</p>
+						</div>
+						<div class="feature_item">
+							<div class="feature_name">Современный дизайн</div>
+							<p>
+								В дизайне используются все современные техники: Flat-дизайн, Parallax, анимации элементов на странице, интерактивная инфографика.
+							</p>
+						</div>
+					</div>
+
+			</div>
+
+		</div>
 	</section>
 
 	<footer class="main_footer bg_dark">
@@ -318,6 +386,7 @@
 	</script>
 
 	<!-- Load Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
 	<script>var scr = {"scripts":[
 		{"src" : "js/libs.js", "async" : false},
 		{"src" : "js/common.js", "async" : false}

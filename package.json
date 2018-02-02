@@ -10,5 +10,8 @@
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.0.4",
     "node-bourbon": "^4.2.3"
+  },
+  "dependencies": {
+    "sass": "^1.0.0-beta.4"
   }
 }
